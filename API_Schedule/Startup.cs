@@ -1,15 +1,13 @@
+using API_Schedule.Application.Interface;
+using API_Schedule.Application.Receiver;
+using API_Schedule.Infrastucture.Interface;
+using API_Schedule.Infrastucture.Repository;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.HttpsPolicy;
-using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using Microsoft.Extensions.Logging;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+
 
 namespace API_Schedule
 {
@@ -25,44 +23,48 @@ namespace API_Schedule
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddControllers();
-            services.AddSwaggerGen(options =>
-            {
-                options.SwaggerDoc("v1",
-                    new Microsoft.OpenApi.Models.OpenApiInfo
-                    {
-                        Title = "Super Agenda",
-                        Version = "v1",
-                        Description = "Projeto Super Agenda, API integração com banco",
-                    });
-            });
+            services
+               .AddLoggerFactory()
+               .AddCustomSwagger(Configuration)
+               .AddCustomMvc()
+               .AddControllers()
+               .AddNewtonsoftJson(options =>
+               {
+                   options.SerializerSettings.Converters.Add(new Newtonsoft.Json.Converters.StringEnumConverter());
+                   options.SerializerSettings.NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore;
+               });
+
+            services.AddScoped<IEndPointsReceiver, MetaReceiver>();
+            services.AddScoped<IEndPointsRepository, MetaRepository>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
             if (env.IsDevelopment())
-            {
                 app.UseDeveloperExceptionPage();
-            }
-
-            app.UseSwagger();
-            app.UseSwaggerUI(c =>
-            {
-                c.RoutePrefix = "swagger";
-                c.SwaggerEndpoint("/swagger/v1/swagger.json", "Super Agenda");
-            });
-
-            app.UseHttpsRedirection();
+            else
+                app.UseHsts();
 
             app.UseRouting();
-
-            app.UseAuthorization();
 
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllers();
             });
+
+            UseSwagger(app);
+        }
+
+        private static void UseSwagger(IApplicationBuilder app)
+        {
+            app.UseSwagger()
+                .UseSwaggerUI(c =>
+                {
+                    c.SwaggerEndpoint($"/swagger/v1/swagger.json", "Integration.GPCS.API V1");
+                    c.OAuthClientId("Integration.GPCS.API");
+                    c.OAuthAppName("Integration GPCS API");
+                });
         }
     }
 }

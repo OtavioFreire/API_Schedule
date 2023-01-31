@@ -1,0 +1,36 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v3.1",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v3.1": {
+      "API_Schedule.Application/1.0.0": {
+        "dependencies": {
+          "API_Schedule.Infrastucture": "1.0.0"
+        },
+        "runtime": {
+          "API_Schedule.Application.dll": {}
+        }
+      },
+      "API_Schedule.Infrastucture/1.0.0": {
+        "runtime": {
+          "API_Schedule.Infrastucture.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "API_Schedule.Application/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "API_Schedule.Infrastucture/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

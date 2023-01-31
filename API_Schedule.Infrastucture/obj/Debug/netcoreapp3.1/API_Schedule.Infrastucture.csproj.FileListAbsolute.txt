@@ -1,0 +1,10 @@
+C:\Alura\API\API_Schedule.Infrastucture\bin\Debug\netcoreapp3.1\API_Schedule.Infrastucture.deps.json
+C:\Alura\API\API_Schedule.Infrastucture\bin\Debug\netcoreapp3.1\API_Schedule.Infrastucture.dll
+C:\Alura\API\API_Schedule.Infrastucture\bin\Debug\netcoreapp3.1\API_Schedule.Infrastucture.pdb
+C:\Alura\API\API_Schedule.Infrastucture\obj\Debug\netcoreapp3.1\API_Schedule.Infrastucture.csproj.AssemblyReference.cache
+C:\Alura\API\API_Schedule.Infrastucture\obj\Debug\netcoreapp3.1\API_Schedule.Infrastucture.GeneratedMSBuildEditorConfig.editorconfig
+C:\Alura\API\API_Schedule.Infrastucture\obj\Debug\netcoreapp3.1\API_Schedule.Infrastucture.AssemblyInfoInputs.cache
+C:\Alura\API\API_Schedule.Infrastucture\obj\Debug\netcoreapp3.1\API_Schedule.Infrastucture.AssemblyInfo.cs
+C:\Alura\API\API_Schedule.Infrastucture\obj\Debug\netcoreapp3.1\API_Schedule.Infrastucture.csproj.CoreCompileInputs.cache
+C:\Alura\API\API_Schedule.Infrastucture\obj\Debug\netcoreapp3.1\API_Schedule.Infrastucture.dll
+C:\Alura\API\API_Schedule.Infrastucture\obj\Debug\netcoreapp3.1\API_Schedule.Infrastucture.pdb
