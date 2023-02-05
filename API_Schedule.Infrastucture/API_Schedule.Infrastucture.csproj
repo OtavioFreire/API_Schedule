@@ -8,7 +8,19 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Structure\" />
+    <PackageReference Include="Microsoft.Extensions.Configuration.Abstractions" Version="7.0.0" />
+    <PackageReference Include="System.Data.SqlClient" Version="4.8.5" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="Persistencia">
+      <HintPath>..\API_Schedule\bin\Debug\netcoreapp3.1\LIB\Persistencia.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Context\" />
+    <Folder Include="Entities\" />
   </ItemGroup>
 
 </Project>

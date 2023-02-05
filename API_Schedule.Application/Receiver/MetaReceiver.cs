@@ -25,7 +25,7 @@ namespace API_Schedule.Application.Receiver
 
         public bool Put()
         {
-            return _getAllRepository.Put();
+            return _getAllRepository.Update();
         }
 
         public bool Save()

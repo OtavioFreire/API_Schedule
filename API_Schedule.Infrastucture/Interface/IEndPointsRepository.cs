@@ -10,6 +10,6 @@
 
         bool Delete();
 
-        bool Put();
+        bool Update();
     }
 }

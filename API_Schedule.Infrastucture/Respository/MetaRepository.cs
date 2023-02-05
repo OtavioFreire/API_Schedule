@@ -1,9 +1,13 @@
 ﻿using API_Schedule.Infrastucture.Interface;
+using System;
+using System.Data.SqlClient;
+
 
 namespace API_Schedule.Infrastucture.Repository
 {
     public class MetaRepository : IEndPointsRepository
     {
+
         public bool Delete()
         {
             return true;
@@ -16,10 +20,10 @@ namespace API_Schedule.Infrastucture.Repository
 
         public bool GetById()
         {
-            return true;
+            throw new System.NotImplementedException();
         }
 
-        public bool Put()
+        public bool Update()
         {
             return true;
         }

@@ -1,0 +1,13 @@
+C:\Alura\API\API_Schedule.Application\bin\Release\netcoreapp3.1\API_Schedule.Application.deps.json
+C:\Alura\API\API_Schedule.Application\bin\Release\netcoreapp3.1\API_Schedule.Application.dll
+C:\Alura\API\API_Schedule.Application\bin\Release\netcoreapp3.1\API_Schedule.Application.pdb
+C:\Alura\API\API_Schedule.Application\bin\Release\netcoreapp3.1\API_Schedule.Infrastucture.dll
+C:\Alura\API\API_Schedule.Application\bin\Release\netcoreapp3.1\API_Schedule.Infrastucture.pdb
+C:\Alura\API\API_Schedule.Application\obj\Release\netcoreapp3.1\API_Schedule.Application.csproj.AssemblyReference.cache
+C:\Alura\API\API_Schedule.Application\obj\Release\netcoreapp3.1\API_Schedule.Application.GeneratedMSBuildEditorConfig.editorconfig
+C:\Alura\API\API_Schedule.Application\obj\Release\netcoreapp3.1\API_Schedule.Application.AssemblyInfoInputs.cache
+C:\Alura\API\API_Schedule.Application\obj\Release\netcoreapp3.1\API_Schedule.Application.AssemblyInfo.cs
+C:\Alura\API\API_Schedule.Application\obj\Release\netcoreapp3.1\API_Schedule.Application.csproj.CoreCompileInputs.cache
+C:\Alura\API\API_Schedule.Application\obj\Release\netcoreapp3.1\API_Schedule.Application.csproj.CopyComplete
+C:\Alura\API\API_Schedule.Application\obj\Release\netcoreapp3.1\API_Schedule.Application.dll
+C:\Alura\API\API_Schedule.Application\obj\Release\netcoreapp3.1\API_Schedule.Application.pdb

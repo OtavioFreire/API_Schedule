@@ -34,8 +34,11 @@ namespace API_Schedule
                    options.SerializerSettings.NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore;
                });
 
-            services.AddScoped<IEndPointsReceiver, MetaReceiver>();
-            services.AddScoped<IEndPointsRepository, MetaRepository>();
+            services.AddScoped<MetaReceiver, MetaReceiver>();
+            services.AddScoped<MetaRepository, MetaRepository>();
+            services.AddScoped<EventoReceiver, EventoReceiver>();
+            services.AddScoped<EventoRepository, EventoRepository>();
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
