@@ -1,5 +1,7 @@
 ﻿using API_Schedule.Application.Receiver;
+using API_Schedule.Infrastucture.Entities;
 using Microsoft.AspNetCore.Mvc;
+using System.Collections.Generic;
 
 namespace API_Schedule.Controllers
 {
@@ -15,13 +17,13 @@ namespace API_Schedule.Controllers
         }
 
         [HttpGet("GetAll")]
-        public bool Getall()
+        public List<ClassMeta> Getall()
         {
             return _reciver.GetAll();
         }
 
         [HttpGet("GetById")]
-        public bool GetById()
+        public ClassMeta GetById()
         {
             return _reciver.GetById();
         }
@@ -33,9 +35,9 @@ namespace API_Schedule.Controllers
         }
 
         [HttpDelete("Delete")]
-        public bool Delete()
+        public bool Delete(int Id)
         {
-            return _reciver.Delete();
+            return _reciver.Delete(Id);
         }
 
         [HttpPut("Delete")]

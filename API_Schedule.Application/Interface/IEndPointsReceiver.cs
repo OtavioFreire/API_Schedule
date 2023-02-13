@@ -1,14 +1,16 @@
-﻿namespace API_Schedule.Application.Interface
-{
-    public interface IEndPointsReceiver
-    {
-        bool GetAll();
+﻿using System.Collections.Generic;
 
-        bool GetById();
+namespace API_Schedule.Application.Interface
+{
+    public interface IEndPointsReceiver<T>
+    {
+        List<T> GetAll();
+
+        T GetById();
 
         bool Save();
 
-        bool Delete();
+        bool Delete(int Id);
 
         bool Put();
     }

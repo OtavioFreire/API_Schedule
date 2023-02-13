@@ -1,10 +1,12 @@
 ﻿using API_Schedule.Application.Interface;
+using API_Schedule.Infrastucture.Entities;
 using API_Schedule.Infrastucture.Interface;
 using API_Schedule.Infrastucture.Repository;
+using System.Collections.Generic;
 
 namespace API_Schedule.Application.Receiver
 {
-    public class MetaReceiver : IEndPointsReceiver
+    public class MetaReceiver : IEndPointsReceiver<ClassMeta>
     {
         private readonly MetaRepository _getAllRepository;
 
@@ -13,14 +15,18 @@ namespace API_Schedule.Application.Receiver
             _getAllRepository = repository;
         }
 
-        public bool GetAll()
+        public List<ClassMeta> GetAll()
         {
-            return _getAllRepository.GetAll();
+            List<ClassMeta> ListMeta = _getAllRepository.GetAll();
+
+            return ListMeta;
         }
 
-        public bool GetById()
+        public ClassMeta GetById()
         {
-            return _getAllRepository.GetById();
+            ClassMeta meta = new ClassMeta();
+
+            return meta;
         }
 
         public bool Put()
@@ -33,7 +39,7 @@ namespace API_Schedule.Application.Receiver
             return _getAllRepository.Save();
         }
 
-        public bool Delete()
+        public bool Delete(int Id)
         {
             return _getAllRepository.Delete();
         }

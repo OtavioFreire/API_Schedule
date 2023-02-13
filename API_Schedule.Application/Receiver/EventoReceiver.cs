@@ -1,9 +1,11 @@
 ﻿using API_Schedule.Application.Interface;
+using API_Schedule.Infrastucture.Entities;
 using API_Schedule.Infrastucture.Repository;
+using System.Collections.Generic;
 
 namespace API_Schedule.Application.Receiver
 {
-    public class EventoReceiver : IEndPointsReceiver
+    public class EventoReceiver : IEndPointsReceiver<ClassEvento>
     {
         EventoRepository _metaRepository;
 
@@ -12,14 +14,17 @@ namespace API_Schedule.Application.Receiver
             _metaRepository = metaRepository;
         }
 
-        public bool GetAll()
+        public List<ClassEvento> GetAll()
         {
-            return _metaRepository.GetAll();
+            var ListEvento = new List<ClassEvento>();
+
+            return ListEvento;
         }
 
-        public bool GetById()
+        public ClassEvento GetById()
         {
-            return _metaRepository.GetById();
+            var Evento = new ClassEvento();
+            return Evento;
         }
 
         public bool Put()
@@ -32,7 +37,7 @@ namespace API_Schedule.Application.Receiver
             return _metaRepository.Save();
         }
 
-        public bool Delete()
+        public bool Delete(int Id)
         {
             return _metaRepository.Delete();
         }

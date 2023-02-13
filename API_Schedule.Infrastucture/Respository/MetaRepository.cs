@@ -1,11 +1,14 @@
-﻿using API_Schedule.Infrastucture.Interface;
+﻿using API_Schedule.Infrastucture.Context;
+using API_Schedule.Infrastucture.Entities;
+using API_Schedule.Infrastucture.Interface;
 using System;
+using System.Collections.Generic;
 using System.Data.SqlClient;
-
+using System.Linq;
 
 namespace API_Schedule.Infrastucture.Repository
 {
-    public class MetaRepository : IEndPointsRepository
+    public class MetaRepository : IEndPointsRepository<ClassMeta>
     {
 
         public bool Delete()
@@ -13,12 +16,19 @@ namespace API_Schedule.Infrastucture.Repository
             return true;
         }
 
-        public bool GetAll()
+        public List<ClassMeta> GetAll()
         {
-            return true;
+            List<ClassMeta> list = new List<ClassMeta>();
+
+            using (DbApiContext contexto = new DbApiContext()) 
+            {
+                list = contexto.DBMeta.ToList();
+            }
+
+            return list;
         }
 
-        public bool GetById()
+        public ClassMeta GetById()
         {
             throw new System.NotImplementedException();
         }

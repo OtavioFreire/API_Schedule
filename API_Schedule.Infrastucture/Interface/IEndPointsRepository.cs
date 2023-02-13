@@ -1,15 +1,12 @@
-﻿namespace API_Schedule.Infrastucture.Interface
+﻿using System.Collections.Generic;
+
+namespace API_Schedule.Infrastucture.Interface
 {
-    public interface IEndPointsRepository
+    public interface IEndPointsRepository<T>
     {
-        bool GetAll();
+        List<T> GetAll();
 
-        bool GetById();
+        T GetById();
 
-        bool Save();
-
-        bool Delete();
-
-        bool Update();
     }
 }
